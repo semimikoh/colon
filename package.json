@@ -1,0 +1,15 @@
+{
+  "name": "colon-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo",
+    "build": "echo",
+    "test": "echo"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}
