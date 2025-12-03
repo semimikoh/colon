@@ -1,4 +1,6 @@
-// eslint.config.js
+// For more info, see https://github.com/storybookjs/eslint-plugin-storybook#configuration-flat-config-format
+import storybook from 'eslint-plugin-storybook';
+
 import js from '@eslint/js';
 import globals from 'globals';
 import reactPlugin from 'eslint-plugin-react';
@@ -9,11 +11,18 @@ import prettier from 'eslint-config-prettier';
 
 export default [
   {
-    ignores: ['node_modules', 'dist', 'packages/**/dist'],
+    ignores: [
+      'node_modules',
+      'dist',
+      'packages/**/dist',
+      '.storybook/**',
+      'stories/**',
+      'vitest.config.ts',
+      'vitest.shims.d.ts',
+      'storybook-static/**',
+    ],
   },
-
   js.configs.recommended,
-
   {
     languageOptions: {
       ecmaVersion: 'latest',
@@ -44,6 +53,6 @@ export default [
       ],
     },
   },
-
   prettier,
+  ...storybook.configs['flat/recommended'],
 ];
