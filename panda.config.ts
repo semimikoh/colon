@@ -1,4 +1,5 @@
 import { defineConfig } from '@pandacss/dev';
+import { semanticColors } from './packages/tokens/src/colors/semantic.colors';
 
 export default defineConfig({
   // 1) colon-ui 패키지 소스에서 스타일을 읽게 설정
@@ -15,6 +16,10 @@ export default defineConfig({
 
   // 5) Tokens 여기서 확장 가능
   theme: {
-    extend: {},
+    extend: {
+      tokens: {
+        colors: semanticColors,
+      },
+    },
   },
 });

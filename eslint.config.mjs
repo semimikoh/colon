@@ -56,7 +56,7 @@ export default [
 
       // unused 변수 경고 (앞에 _ 붙이면 무시)
       'unused-imports/no-unused-vars': [
-        'warn',
+        'error',
         { vars: 'all', varsIgnorePattern: '^_', args: 'after-used' },
       ],
 
